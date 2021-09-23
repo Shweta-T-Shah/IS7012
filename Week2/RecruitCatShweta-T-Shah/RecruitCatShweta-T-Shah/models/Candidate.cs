@@ -22,6 +22,7 @@ namespace RecruitCatShweta_T_Shah.models
         public decimal TargetSalary { get; set; }
 
         [DisplayName("Start Date")]
+        [DataType(DataType.Date)]
         public DateTime? StartDate { get; set; }
 
         [DisplayName("Notice Period (Days)")]
@@ -34,7 +35,7 @@ namespace RecruitCatShweta_T_Shah.models
         public string LocationPreference { get; set; }
 
         //[DisplayName("Minimum Salary")]
-        //public decimal? MinimumSalaryRequirement { get; set; }
+          //public decimal? MinimumSalaryRequirement { get; set; }
 
 
         [DisplayName("Email")]
@@ -42,6 +43,7 @@ namespace RecruitCatShweta_T_Shah.models
 
 
         [DisplayName("DOB")]
+        [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
         public string Gender { get; set; }

@@ -80,10 +80,10 @@
                 @Html.DisplayFor(modelItem => item.NumberOfEmployees)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Industry.Id)
+                @Html.DisplayFor(modelItem => item.Industry.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.JobTitle.Id)
+                @Html.DisplayFor(modelItem => item.JobTitle.Title)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

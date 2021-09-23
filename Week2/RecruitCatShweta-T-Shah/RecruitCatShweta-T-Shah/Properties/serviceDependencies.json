@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:RecruitCatShweta_T_ShahContext"
+    }
+  }
+}

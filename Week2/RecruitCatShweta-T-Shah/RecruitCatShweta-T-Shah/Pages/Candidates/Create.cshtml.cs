@@ -21,11 +21,11 @@ namespace RecruitCatShweta_T_Shah.Pages.Candidates
 
         public IActionResult OnGet()
         {
-        ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "Id");
-        ViewData["IndustryId"] = new SelectList(_context.Industry, "Id", "Id");
-        ViewData["JobTitleId"] = new SelectList(_context.Set<JobTitle>(), "Id", "Id");
+        ViewData["CompanyId"] = new SelectList(_context.Company, "Id", "Name");
+        ViewData["IndustryId"] = new SelectList(_context.Industry, "Id", "Name");
+        ViewData["JobTitleId"] = new SelectList(_context.Set<JobTitle>(), "Id", "Title");
             return Page();
-        }
+         }
 
         [BindProperty]
         public Candidate Candidate { get; set; }

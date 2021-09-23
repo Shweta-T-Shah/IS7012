@@ -38,8 +38,8 @@ namespace RecruitCatShweta_T_Shah.Pages.Companies
             {
                 return NotFound();
             }
-           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "Id");
-           ViewData["JobTitleId"] = new SelectList(_context.Set<JobTitle>(), "Id", "Id");
+           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "Name");
+           ViewData["JobTitleId"] = new SelectList(_context.Set<JobTitle>(), "Id", "Title");
             return Page();
         }
 

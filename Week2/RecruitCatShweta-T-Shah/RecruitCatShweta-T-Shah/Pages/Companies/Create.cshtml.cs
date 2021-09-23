@@ -21,9 +21,12 @@ namespace RecruitCatShweta_T_Shah.Pages.Companies
 
         public IActionResult OnGet()
         {
-        ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "Id");
-        ViewData["JobTitleId"] = new SelectList(_context.Set<JobTitle>(), "Id", "Id");
+        ViewData["IndustryId"] = new SelectList(_context.Industry, "Id", "Name");
+        ViewData["JobTitleId"] = new SelectList(_context.JobTitle, "Id", "Title");
             return Page();
+
+
+            // new SelectList(_context.Company, "Name", "Name");
         }
 
         [BindProperty]

@@ -5,7 +5,7 @@
     ViewData["Title"] = "Industries";
 }
 
-<h1>Industries</h1>
+<h1>All Industries</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -56,7 +56,8 @@
                 @Html.DisplayFor(modelItem => item.Revenue)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.HighRisk)
+
+               @if (@item.HighRisk) { <span class="badge badge-danger">Yes</span>} else {<text>No</text> }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PollutionRating)

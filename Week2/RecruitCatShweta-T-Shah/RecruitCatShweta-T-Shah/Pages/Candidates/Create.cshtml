@@ -5,9 +5,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create a new Candidate</h1>
 
-<h4>Candidate</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -45,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Candidate.LocationPreference" class="control-label"></label>
-                <input asp-for="Candidate.LocationPreference" class="form-control" />
+                <textarea asp-for="Candidate.LocationPreference" class="form-control"></textarea>
                 <span asp-validation-for="Candidate.LocationPreference" class="text-danger"></span>
             </div>
             <div class="form-group">

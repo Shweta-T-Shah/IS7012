@@ -10,13 +10,18 @@
     table {
         text-align: center;
         margin-left: 5px;
+        width:auto;
+        }
+    th {
+        height: 10px;
+        width = 3000px;
     }
 
 
 </style>
 
 
-<h1>Candidates</h1>
+<h1>All Candidates</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -29,10 +34,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].LastName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Candidate[0].TargetSalary)
-            </th>
+            </th>         
             <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].StartDate)
             </th>
@@ -43,15 +45,7 @@
                 @Html.DisplayNameFor(model => model.Candidate[0].IsImmediateAvailable)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Candidate[0].LocationPreference)
-            </th>
-          
-            <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].Email)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.Candidate[0].DateOfBirth)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Candidate[0].Gender)
@@ -78,9 +72,6 @@
                 @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TargetSalary)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
@@ -90,13 +81,7 @@
                 @Html.DisplayFor(modelItem => item.IsImmediateAvailable)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LocationPreference)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Gender)

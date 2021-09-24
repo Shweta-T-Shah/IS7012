@@ -78,6 +78,42 @@
         </dd>
     </dl>
 </div>
+
+
+<div style= "margin-top:30px">
+    <h4 style="margin-bottom:30px">Candidates Information</h4>
+
+    <table class= "table table-bordered; table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var candidate in Model.Company.Candidates)
+            {
+                <tr>
+                    <td>@candidate.FirstName</td>
+                    <td>@candidate.LastName</td>
+                    <td>@candidate.Email</td>
+                    <td>
+                        <a href="#">Details</a>
+                    </td>
+                </tr>
+
+            }
+
+
+
+        </tbody>
+    </table>
+</div>
+
+
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Company.Id">Edit</a> |
     <a asp-page="./Index">Back to List</a>

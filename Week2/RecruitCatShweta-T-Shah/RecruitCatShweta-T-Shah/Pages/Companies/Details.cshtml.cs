@@ -21,16 +21,15 @@ namespace RecruitCatShweta_T_Shah.Pages.Companies
 
         public Company Company { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id) 
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            Company = await _context.Company
-                .Include(c => c.Industry)
-                .Include(c => c.JobTitle).FirstOrDefaultAsync(m => m.Id == id);
+            Company = await _context.Company.Include(x => x.Candidates).FirstOrDefaultAsync(m => m.Id == id);
+
 
             if (Company == null)
             {
